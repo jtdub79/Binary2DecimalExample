@@ -27,16 +27,17 @@ int main() {
 
 int Binary2Decimal(char * binary){
 
-	int numBits = strlen(binary);
+	size_t numBits = strlen(binary);
 	int decimal = 0;
 
 	//while (strcmp(binary+numBits,"\0")) numBits++;
 
-	for (int i=0; i<numBits;i++){
+	for (unsigned int i=0; i<numBits;i++){
 
 		switch(binary[numBits-1-i]){
-			case '1' : decimal += pow(2,i);
-			/* no break */
+			case '1' :
+				decimal += pow(2,i);
+				break;
 			case '0' : break;
 			default :
 				printf("Please only use 0 and 1 for inputs!\n");
