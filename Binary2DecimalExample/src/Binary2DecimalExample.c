@@ -6,7 +6,6 @@
  */
 
 #include <stdio.h>
-
 #include <string.h>
 #include <math.h>
 
@@ -29,8 +28,6 @@ int Binary2Decimal(char * binary){
 
 	size_t numBits = strlen(binary);
 	int decimal = 0;
-
-	//while (strcmp(binary+numBits,"\0")) numBits++;
 
 	for (unsigned int i=0; i<numBits;i++){
 
